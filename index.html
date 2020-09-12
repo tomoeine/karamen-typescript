@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <script src="web-night.js" defer></script>
+    <style>
+      #karamen {
+        position: relative;
+      }
+      .men {
+        width: 200px;
+      }
+      #karasa {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #880000;
+        opacity: 0.5;
+      }
+      #nira,
+      #ninniku {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="karamen-form">
+      <div>辛さ <input type="text" name="karasa" value="1" />辛</div>
+
+      <div>
+        ニラ
+        <input
+          type="radio"
+          name="nira"
+          id="nira-ari"
+          value="あり"
+          checked
+        /><label for="nira-ari">あり</label>
+        <input type="radio" name="nira" id="nira-nasi" value="なし" /><label
+          for="nira-nasi"
+          >なし</label
+        >
+      </div>
+
+      <div>
+        ニンニク
+        <input
+          type="radio"
+          name="ninniku"
+          id="ninniku-ari"
+          value="あり"
+          checked
+        /><label for="ninniku-ari">あり</label>
+        <input
+          type="radio"
+          name="ninniku"
+          id="ninniku-nasi"
+          value="なし"
+        /><label for="ninniku-nasi">なし</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          name="men"
+          id="konnyaku-men-radio"
+          value="こんにゃく麺"
+          checked
+        /><label for="konnyaku-men-radio">こんにゃく麺</label>
+        <input
+          type="radio"
+          name="men"
+          id="chuka-men-radio"
+          value="中華麺"
+        /><label for="chuka-men-radio">中華麺</label>
+      </div>
+      <input type="button" id="submit" value="注文" />
+    </form>
+
+    <div id="karamen" style="display: none">
+      <img id="konnyaku-men" class="men" src="./images/konnyaku-men.png" />
+      <img id="chuka-men" class="men" src="./images/chuka-men.png" />
+      <img id="ninniku" src="./images/ninniku.png" />
+      <div id="karasa"></div>
+      <img id="nira" src="./images/nira.png" />
+    </div>
+  </body>
+</html>
